@@ -3,34 +3,120 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Website</title>
+    <title>True Up | Live FIFA Updates</title>
+    <meta
+      name="description"
+      content="True Up brings quick FIFA match updates, fixtures, and football headlines."
+    >
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <main class="page">
+    <header class="site-header">
+      <a class="logo" href="#top" aria-label="True Up home">
+        <span class="logo-mark">TU</span>
+        <span>True Up</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#live">Live</a>
+        <a href="#fixtures">Fixtures</a>
+        <a href="#news">News</a>
+      </nav>
+    </header>
+
+    <main id="top">
       <section class="hero" aria-labelledby="site-title">
-        <p class="eyebrow">Welcome</p>
-        <h1 id="site-title">My Website</h1>
-        <p class="intro">
-          A clean starter site ready to publish with GitHub and Cloudflare Pages.
-        </p>
-        <a class="button" href="mailto:hello@example.com">Contact Me</a>
+        <div class="hero-copy">
+          <p class="eyebrow">FIFA match center</p>
+          <h1 id="site-title">True Up live football updates</h1>
+          <p class="intro">
+            Follow FIFA scores, match moments, fixtures, and quick football news in one clean place.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#live">See live board</a>
+            <a class="button secondary" href="#fixtures">View fixtures</a>
+          </div>
+        </div>
+
+        <aside class="score-card" aria-label="Featured live match">
+          <div class="live-pill">Live now</div>
+          <div class="teams">
+            <span>FIFA Team A</span>
+            <strong>2 - 1</strong>
+            <span>FIFA Team B</span>
+          </div>
+          <p>72' - Pressure building after a fast counter attack.</p>
+          <small>Sample live card. Real scores need a football data API.</small>
+        </aside>
       </section>
 
-      <section class="features" aria-label="Highlights">
-        <article>
-          <h2>Fast</h2>
-          <p>Static HTML and CSS loads quickly on Cloudflare Pages.</p>
-        </article>
-        <article>
-          <h2>Simple</h2>
-          <p>Edit the text here, push to GitHub, and Cloudflare redeploys it.</p>
-        </article>
-        <article>
-          <h2>Live</h2>
-          <p>Your site gets a public pages.dev address after deployment.</p>
-        </article>
+      <section id="live" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Live board</p>
+          <h2>Current updates</h2>
+          <p id="last-updated">Checking latest time...</p>
+        </div>
+
+        <div class="updates-grid">
+          <article>
+            <span class="tag">Match</span>
+            <h3>Team A scores first</h3>
+            <p>Fast start, sharp passing, and an early finish inside the box.</p>
+          </article>
+          <article>
+            <span class="tag">Moment</span>
+            <h3>Penalty review</h3>
+            <p>VAR checks a possible handball after a cross from the right side.</p>
+          </article>
+          <article>
+            <span class="tag">Table</span>
+            <h3>Group race tightens</h3>
+            <p>One goal could change the standings before the final whistle.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="fixtures" class="section split">
+        <div>
+          <p class="eyebrow">Fixtures</p>
+          <h2>Upcoming FIFA matches</h2>
+          <p>
+            Add your real teams, kickoff times, and tournament schedule here. The page is ready for
+            GitHub and Cloudflare auto-deploy updates.
+          </p>
+        </div>
+        <div class="fixture-list" aria-label="Upcoming fixtures">
+          <div>
+            <span>Today</span>
+            <strong>Team C vs Team D</strong>
+            <small>20:00</small>
+          </div>
+          <div>
+            <span>Tomorrow</span>
+            <strong>Team E vs Team F</strong>
+            <small>18:30</small>
+          </div>
+          <div>
+            <span>Weekend</span>
+            <strong>Team G vs Team H</strong>
+            <small>21:00</small>
+          </div>
+        </div>
+      </section>
+
+      <section id="news" class="section news-band">
+        <p class="eyebrow">News</p>
+        <h2>Quick football headlines</h2>
+        <p>
+          True Up is live. Next step: connect a real sports scores API so the score cards update
+          automatically during FIFA matches.
+        </p>
       </section>
     </main>
+
+    <footer>
+      <p>True Up - Live FIFA updates</p>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
